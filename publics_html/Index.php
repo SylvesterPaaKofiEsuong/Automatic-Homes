@@ -1,9 +1,11 @@
 <?php 
 $pageTitle = "Home";
-include 'includes/header.php'; 
+include './includes/header.php'; 
 ?>
 
-<?php include 'includes/navbar.php'; ?>
+
+
+<?php include './includes/navbar.php'; ?>
 
 <main>
     <section class="hero">
@@ -42,4 +44,4 @@ include 'includes/header.php';
     </section>
 </main>
 
-<?php include 'includes/footer.php'; ?>
+<?php include './includes/footer.php'; ?>

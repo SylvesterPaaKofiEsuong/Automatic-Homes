@@ -1,8 +1,9 @@
-<nav>
-    <div class="logo">
-        <img src="logo.png" alt="Company Logo">
+<nav class="navbar">
+    <div class="navbar-logo">
+        <img src="logo.png" alt="Automatic Homes" class="logo">
+        Automatic Homes
     </div>
-    <ul>
+    <ul class="navbar-links">
         <li><a href="index.php">Home</a></li>
         <li><a href="products.php">Products</a></li>
         <li><a href="services.php">Services</a></li>
