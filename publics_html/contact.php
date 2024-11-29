@@ -1,28 +1,78 @@
 <?php 
 $pageTitle = "Contact Us";
-include 'includes/header.php'; 
+include 'includes/header.php';
+include 'includes/navbar.php';
 ?>
 
-<?php include 'includes/navbar.php'; ?>
-
 <main class="contact-page">
-    <section class="contact-section">
-        <h1>Get in Touch</h1>
-        <div class="contact-container">
+    <section class="contact-hero">
+        <div class="hero-content">
+            <h1>Get in Touch</h1>
+            <p>Let's discuss how we can make your home secured</p>
+        </div>
+    </section>
+
+    <section class="contact-content">
+        <div class="contact-grid">
             <div class="contact-info">
-                <h3>Contact Details</h3>
-                <p>Phone: (555) 123-4567</p>
-                <p>Email: info@automatichomes.com</p>
-                <p>Address: 123 Security Lane, Tech City, TC 12345</p>
+                <h2>Contact Information</h2>
+                <div class="info-items">
+                    <div class="info-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                        </svg>
+                        <div>
+                            <h3>Location</h3>
+                            <p>123 Smart Street, Tech City, TC 12345</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@automatic-homes.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <form class="contact-form" method="POST" action="process-contact.php">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="tel" name="phone" placeholder="Your Phone Number">
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
+            <div class="contact-form">
+                <h2>Send us a Message</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Full Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email Address</label>
+                    </div>
+                    <div class="form-group">
+                        <select id="service" name="service" required>
+                            <option value="">Select Service</option>
+                            <option value="automation">Home Automation</option>
+                            <option value="security">Security Systems</option>
+                            <option value="monitoring">24/7 Monitoring</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
         </div>
     </section>
 </main>
