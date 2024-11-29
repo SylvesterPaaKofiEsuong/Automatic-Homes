@@ -7,10 +7,32 @@ include 'includes/navbar.php';
 <main class="about-page">
     <!-- Hero Section -->
     <section class="about-hero">
-        <div class="hero-content">
-            <h1>Leading the Future of Smart Homes</h1>
-            <p>Transforming houses into intelligent living spaces since 2010</p>
+      <div class="slide" style="--bg-image: url('../images/about/team.jpg')">
+    <div class="overlay gradient-overlay"></div>
+    <div class="hero-content animate-fade-in">
+        <span class="hero-label">Our Story</span>
+        <h1 class="hero-title">Who We Are</h1>
+        <p class="hero-subtitle">Leaders in home automation and security solutions</p>
+        <div class="cta-group">
+            <a href="#team" class="cta-button primary">Meet Our Team</a>
+            <a href="contact.php" class="cta-button secondary">Contact Us</a>
         </div>
+    </div>
+</div>
+
+<div class="slide" style="--bg-image: url('../images/about/expertise.jpg')">
+    <div class="overlay gradient-overlay"></div>
+    <div class="hero-content animate-fade-in">
+        <span class="hero-label">Experience</span>
+        <h1 class="hero-title">Our Expertise</h1>
+        <p class="hero-subtitle">Decades of experience in smart home security</p>
+        <div class="cta-group">
+            <a href="#history" class="cta-button primary">Our History</a>
+            <a href="services.php" class="cta-button secondary">Our Services</a>
+        </div>
+    </div>
+</div>
+  
     </section>
 
     <!-- Company Story -->

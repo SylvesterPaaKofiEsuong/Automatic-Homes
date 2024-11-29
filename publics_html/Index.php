@@ -34,8 +34,8 @@ include './includes/navbar.php';
                 <h1 class="hero-title">Intelligent Monitoring</h1>
                 <p class="hero-subtitle">24/7 smart surveillance with real-time notifications</p>
                 <div class="cta-group">
-                    <a href="demo.php" class="cta-button primary">Watch Demo</a>
-                    <a href="features.php" class="cta-button secondary">Learn More</a>
+                    <a href="#" class="cta-button primary">Watch Demo</a>
+                    <a href="services.php" class="cta-button secondary">Learn More</a>
                 </div>
             </div>
         </div>
@@ -49,13 +49,13 @@ include './includes/navbar.php';
                 <p class="hero-subtitle">Transform your space with integrated smart home solutions</p>
                 <div class="cta-group">
                     <a href="contact.php" class="cta-button primary">Free Consultation</a>
-                    <a href="gallery.php" class="cta-button secondary">View Gallery</a>
+                    <a href="products.php" class="cta-button secondary">View Gallery</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Enhanced Navigation -->
+    <!-- Navigation Arrows -->
     <div class="slider-navigation">
         <button class="prev" aria-label="Previous Slide">
             <svg viewBox="0 0 24 24" width="24" height="24">
@@ -78,6 +78,49 @@ include './includes/navbar.php';
 
 <section class="featured-products">
     <div class="section-header">
+        <h2>Our Security Solutions</h2>
+        <p>Discover our cutting-edge security systems</p>
+    </div>
+
+    <div class="product-grid">
+        <?php
+        $products = [
+            [
+                'name' => 'Smart Home Security System',
+                'description' => 'Complete home security solution with mobile app integration',
+                'image' => 'security-system-1.jpg',
+                'price' => 'Custom Pricing'
+            ],
+            [
+                'name' => 'Advanced Motion Sensors',
+                'description' => 'High-precision motion detection for comprehensive protection',
+                'image' => 'motion-sensor.jpg',
+                'price' => 'Custom Pricing'
+            ]
+        ];
+
+        foreach ($products as $product) {
+            echo "<div class='product-card'>";
+            echo "<img src='images/{$product['image']}' alt='{$product['name']}'>";
+            echo "<h3>{$product['name']}</h3>";
+            echo "<p>{$product['description']}</p>";
+            echo "<span class='price'>{$product['price']}</span>";
+            echo "<a href='#' class='btn'>Request Quote</a>";
+            echo "</div>";
+        }
+        ?>
+    </div>
+    <div class="view-all">
+        <a href="products.php" class="btn-secondary">View All Products</a>
+    </div>
+</section>
+
+
+
+
+<!--
+<section class="featured-products">
+    <div class="section-header">
         <h2>Featured Solutions</h2>
         <p>Discover our most popular smart home security products</p>
     </div>
@@ -85,7 +128,7 @@ include './includes/navbar.php';
     <div class="product-grid">
         <div class="product-card">
             <div class="product-image">
-                <img src="../images/products/product4" alt="Smart Security Camera">
+                <img src="/publics_html/images/products/product6.jpg" alt="Smart Security Camera">
                 <div class="product-badge">Bestseller</div>
             </div>
             <div class="product-content">
@@ -109,7 +152,7 @@ include './includes/navbar.php';
 
         <div class="product-card">
             <div class="product-image">
-                <img src="../images/products/product11.jpg" alt="Smart Door Lock">
+                <img src="/publics_html/images/products/product5.jpg" alt="Smart Door Lock">
                 <div class="product-badge">New</div>
             </div>
             <div class="product-content">
@@ -133,7 +176,7 @@ include './includes/navbar.php';
 
         <div class="product-card">
             <div class="product-image">
-                <img src="../images/products/product0.jpg" alt="Smart Home Hub">
+                <img src="/publics_html/images/products/product4.jpg" alt="Smart Home Hub">
                 <div class="product-badge">Popular</div>
             </div>
             <div class="product-content">
@@ -155,7 +198,7 @@ include './includes/navbar.php';
             </div>
         </div>
     </div>
-</section>
+</section>-->
 
 <section class="services-overview">
     <div class="section-header">

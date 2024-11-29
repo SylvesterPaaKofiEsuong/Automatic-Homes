@@ -7,10 +7,32 @@ include './includes/navbar.php';
 <main class="services-page">
     <!-- Hero Banner -->
     <section class="services-hero">
-        <div class="hero-content">
-            <h1>Smart Home Services</h1>
-            <p>Experience the future of home automation with our comprehensive solutions</p>
+        <div class="slide" style="--bg-image: url('../images/services/service-main.jpg')">
+    <div class="overlay gradient-overlay"></div>
+    <div class="hero-content animate-fade-in">
+        <span class="hero-label">Professional</span>
+        <h1 class="hero-title">Security Services</h1>
+        <p class="hero-subtitle">Expert installation and maintenance for your security systems</p>
+        <div class="cta-group">
+            <a href="contact.php" class="cta-button primary">Schedule Service</a>
+            <a href="#services" class="cta-button secondary">View Services</a>
         </div>
+    </div>
+</div>
+
+<div class="slide" style="--bg-image: url('../images/services/monitoring.jpg')">
+    <div class="overlay gradient-overlay"></div>
+    <div class="hero-content animate-fade-in">
+        <span class="hero-label">24/7</span>
+        <h1 class="hero-title">Monitoring Solutions</h1>
+        <p class="hero-subtitle">Round-the-clock protection for your peace of mind</p>
+        <div class="cta-group">
+            <a href="contact.php" class="cta-button primary">Get Started</a>
+            <a href="#monitoring" class="cta-button secondary">Learn More</a>
+        </div>
+    </div>
+</div>
+
     </section>
 
     <!-- Main Services Section -->

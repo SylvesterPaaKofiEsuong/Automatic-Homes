@@ -4,13 +4,35 @@ include 'includes/header.php';
 include 'includes/navbar.php';
 ?>
 
-<main class="contact-page">
-    <section class="contact-hero">
-        <div class="hero-content">
-            <h1>Get in Touch</h1>
-            <p>Let's discuss how we can make your home secured</p>
+<section class="hero-slider">
+<div class="slider">
+    <div class="slide" style="--bg-image: url('publics_html/')">
+    <div class="overlay gradient-overlay"></div>
+    <div class="hero-content animate-fade-in">
+        <span class="hero-label">Get In Touch</span>
+        <h1 class="hero-title">Contact Us</h1>
+        <p class="hero-subtitle">We're here to help with your security needs</p>
+        <div class="cta-group">
+            <a href="#contact-form" class="cta-button primary">Send Message</a>
+            <a href="tel:1234567890" class="cta-button secondary">Call Now</a>
         </div>
-    </section>
+      </div>
+     </div>
+
+<div class="slide" style="--bg-image: url('../images/contact/locations.jpg')">
+    <div class="overlay gradient-overlay"></div>
+    <div class="hero-content animate-fade-in">
+        <span class="hero-label">Locations</span>
+        <h1 class="hero-title">Visit Us</h1>
+        <p class="hero-subtitle">Find our nearest office to you</p>
+        <div class="cta-group">
+            <a href="#locations" class="cta-button primary">Our Locations</a>
+            <a href="#schedule" class="cta-button secondary">Book Meeting</a>
+        </div>
+    </div>
+</div>
+</div>
+</section>
 
     <section class="contact-content">
         <div class="contact-grid">
@@ -75,6 +97,5 @@ include 'includes/navbar.php';
             </div>
         </div>
     </section>
-</main>
 
 <?php include 'includes/footer.php'; ?>

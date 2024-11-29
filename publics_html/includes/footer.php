@@ -24,6 +24,7 @@
             © 2024 Automatic Homes & Security Systems. All Rights Reserved.
         </div>
     </footer>
+    <script src="js/contact.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
