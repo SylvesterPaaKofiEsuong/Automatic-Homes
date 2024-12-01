@@ -35,16 +35,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="login-container w-full max-w-md rounded-2xl p-8 animate-fade-in">
         <form method="POST" class="space-y-6">
             <div class="text-center">
-                <h2 class="text-3xl font-bold text-white mb-2">Admin Login</h2>
-                <p class="text-white text-opacity-80">Enter your credentials to access the dashboard</p>
+                <h2 class="text-3xl font-bold text-dark mb-2">Admin Login</h2>
+                <p class="text-dark text-opacity-80">Enter your credentials to access the dashboard</p>
             </div>
 
-            <?php // if(isset($error)): ?>
-                <div class="bg-red-500 bg-opacity-20 text-white p-4 rounded-lg text-center">
+            <?php /*if(isset($error)): ?>
+                <div class="bg-green-500 bg-opacity-20 text-dark p-4 rounded-lg text-center">
                     <i class="fas fa-exclamation-triangle mr-2"></i>
                     <?php // echo htmlspecialchars($error); ?>
                 </div>
-            <?php //endif; ?>
+            <?php //endif; */?>
 
             <div class="space-y-4">
                 <div>
@@ -55,7 +55,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             name="username" 
                             placeholder="Username" 
                             required 
-                            class="input-field w-full py-3 pl-12 pr-4 bg-white bg-opacity-10 text-white placeholder-white placeholder-opacity-70 border border-white border-opacity-20 rounded-lg focus:outline-none focus:border-[#10B981]">
+                            class="input-field w-full py-3 pl-12 pr-4 bg-white bg-opacity-10
+                             text-white placeholder-dark placeholder-opacity-70 border border-green 
+                             border-opacity-20 rounded-lg focus:outline-none focus:border-[#10B981]">
                     </div>
                 </div>
 
@@ -67,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             name="password" 
                             placeholder="Password" 
                             required 
-                            class="input-field w-full py-3 pl-12 pr-4 bg-white bg-opacity-10 text-white placeholder-white placeholder-opacity-70 border border-white border-opacity-20 rounded-lg focus:outline-none focus:border-[#10B981]">
+                            class="input-field w-full py-3 pl-12 pr-4 bg-white bg-opacity-10 text-white placeholder-dark placeholder-opacity-70 border border-green border-opacity-20 rounded-lg focus:outline-none focus:border-[#10B981]">
                     </div>
                 </div>
             </div>
@@ -81,11 +83,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
 
             <div class="text-center">
-                <a href="#" class="text-white text-opacity-70 hover:text-opacity-100 transition-colors text-sm">
+                <a href="#" class="text-dark text-opacity-70 hover:text-opacity-100 transition-colors text-sm">
                     Forgot Password?
                 </a>
             </div>
         </form>
     </div>
 </body>
+<script src="https://cdn.tailwindcss.com"></script>
+
 </html>
