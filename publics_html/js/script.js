@@ -173,3 +173,71 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+
+   // Countup Animation Function
+function animateCountup() {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    
+    statNumbers.forEach(element => {
+        // Extract the original symbol and number
+        const originalText = element.textContent;
+        const symbol = originalText.replace(/[0-9]/g, '');
+        const target = parseFloat(originalText);
+        
+        const duration = 2000; // Total animation duration in milliseconds
+        const frameDuration = 1000 / 60; // 60 fps
+        const totalFrames = Math.round(duration / frameDuration);
+        
+        let currentFrame = 0;
+
+        function updateNumber() {
+            currentFrame++;
+            const progress = currentFrame / totalFrames;
+            const currentNumber = Math.round(target * progress);
+            
+            // Display number with original symbol
+            element.textContent = `${currentNumber}${symbol}`;
+            
+            if (currentFrame < totalFrames) {
+                requestAnimationFrame(updateNumber);
+            } else {
+                // Ensure final number is exact with original symbol
+                element.textContent = originalText;
+            }
+        }
+        
+        // Only start animation when element is in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    updateNumber();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        observer.observe(element);
+    });
+}
+
+// Run the animation when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', animateCountup);
+
+
+//Newsletter Form Submission
+document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    
+    // Enhanced email validation
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    
+    if (emailRegex.test(email)) {
+        // Simulate successful subscription
+        alert(`Thank you, ${name}! You've successfully subscribed with ${email}.`);
+        this.reset();
+    } else {
+        alert('Please enter a valid email address.');
+    }
+});

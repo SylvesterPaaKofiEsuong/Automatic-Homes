@@ -4,35 +4,57 @@ include 'includes/header.php';
 include 'includes/navbar.php';
 ?>
 
+<!-- Hero Banner -->
 <section class="hero-slider">
-<div class="slider">
-    <div class="slide" style="--bg-image: url('publics_html/')">
-    <div class="overlay gradient-overlay"></div>
-    <div class="hero-content animate-fade-in">
-        <span class="hero-label">Get In Touch</span>
-        <h1 class="hero-title">Contact Us</h1>
-        <p class="hero-subtitle">We're here to help with your security needs</p>
-        <div class="cta-group">
-            <a href="#contact-form" class="cta-button primary">Send Message</a>
-            <a href="tel:1234567890" class="cta-button secondary">Call Now</a>
+    <div class="slider">
+        <!-- Slide 1 -->
+        <div class="slide" style="--bg-image: url('../images/products/product13.jpg')">
+            <div class="overlay gradient-overlay"></div>
+            <div class="hero-content animate-fade-in">
+                 <span class="hero-label">Get In Touch</span>
+                 <h1 class="hero-title">Contact Us</h1>
+                 <p class="hero-subtitle">We're here to help with your security needs</p>
+                 <div class="cta-group">
+                     <a href="#contact-form" class="cta-button primary">Send Message</a>
+                     <a href="tel:1234567890" class="cta-button secondary">Call Now</a>
+                </div>
+            </div>
         </div>
-      </div>
-     </div>
 
-<div class="slide" style="--bg-image: url('../images/contact/locations.jpg')">
-    <div class="overlay gradient-overlay"></div>
-    <div class="hero-content animate-fade-in">
-        <span class="hero-label">Locations</span>
-        <h1 class="hero-title">Visit Us</h1>
-        <p class="hero-subtitle">Find our nearest office to you</p>
-        <div class="cta-group">
-            <a href="#locations" class="cta-button primary">Our Locations</a>
-            <a href="#schedule" class="cta-button secondary">Book Meeting</a>
+        <!-- Slide 2 -->
+        <div class="slide" style="--bg-image: url('../images/products/product14.jpg')">
+            <div class="overlay gradient-overlay"></div>
+            <div class="hero-content animate-fade-in">
+                 <span class="hero-label">Locations</span>
+                <h1 class="hero-title">Visit Us</h1>
+                <p class="hero-subtitle">Find our nearest office to you</p>
+                <div class="cta-group">
+                <a href="#locations" class="cta-button primary">Our Locations</a>
+                <a href="#schedule" class="cta-button secondary">Book Meeting</a>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-</div>
+
+    <!-- Navigation Arrows -->
+    <div class="slider-navigation">
+        <button class="prev" aria-label="Previous Slide">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+            </svg>
+        </button>
+        <div class="slide-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+        </div>
+        <button class="next" aria-label="Next Slide">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+            </svg>
+        </button>
+    </div>
 </section>
+
 
     <section class="contact-content">
         <div class="contact-grid">
@@ -44,8 +66,8 @@ include 'includes/navbar.php';
                             <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
                         </svg>
                         <div>
-                            <h3>Location</h3>
-                            <p>123 Smart Street, Tech City, TC 12345</p>
+                            <h3 id="locations">Location</h3>
+                            <p>Near Police Depot, Tesano City, TC 12345</p>
                         </div>
                     </div>
                     <div class="info-item">
@@ -63,13 +85,13 @@ include 'includes/navbar.php';
                         </svg>
                         <div>
                             <h3>Phone</h3>
-                            <p>+1 (555) 123-4567</p>
+                            <p>+(233)54 2703000</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="contact-form">
+            <div class="contact-form" id="schedule">
                 <h2>Send us a Message</h2>
                 <form id="contactForm">
                     <div class="form-group">

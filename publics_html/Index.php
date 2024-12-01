@@ -76,49 +76,9 @@ include './includes/navbar.php';
 </section>
 
 
-<section class="featured-products">
-    <div class="section-header">
-        <h2>Our Security Solutions</h2>
-        <p>Discover our cutting-edge security systems</p>
-    </div>
-
-    <div class="product-grid">
-        <?php
-        $products = [
-            [
-                'name' => 'Smart Home Security System',
-                'description' => 'Complete home security solution with mobile app integration',
-                'image' => 'security-system-1.jpg',
-                'price' => 'Custom Pricing'
-            ],
-            [
-                'name' => 'Advanced Motion Sensors',
-                'description' => 'High-precision motion detection for comprehensive protection',
-                'image' => 'motion-sensor.jpg',
-                'price' => 'Custom Pricing'
-            ]
-        ];
-
-        foreach ($products as $product) {
-            echo "<div class='product-card'>";
-            echo "<img src='images/{$product['image']}' alt='{$product['name']}'>";
-            echo "<h3>{$product['name']}</h3>";
-            echo "<p>{$product['description']}</p>";
-            echo "<span class='price'>{$product['price']}</span>";
-            echo "<a href='#' class='btn'>Request Quote</a>";
-            echo "</div>";
-        }
-        ?>
-    </div>
-    <div class="view-all">
-        <a href="products.php" class="btn-secondary">View All Products</a>
-    </div>
-</section>
 
 
 
-
-<!--
 <section class="featured-products">
     <div class="section-header">
         <h2>Featured Solutions</h2>
@@ -140,12 +100,12 @@ include './includes/navbar.php';
                     <li>Cloud Storage</li>
                 </ul>
                 <div class="product-actions">
-                    <a href="products.php" class="btn-primary">View Details</a>
-                    <a href="#" class="btn-icon" aria-label="Add to Compare">
-                        <svg width="24" height="24" viewBox="0 0 24 24">
-                            <path d="M9 1v2h6V1h2v2h4v18H3V3h4V1h2zm11 9H4v9h16v-9zM7 3H5v3h14V3h-2v1h-2V3H9v1H7V3z"/>
-                        </svg>
-                    </a>
+                    <details>
+                  <summary> </summary>
+                  <p>Epcot is a theme park at Walt Disney World Resort featuring 
+                    exciting attractions, international pavilions, award-winning 
+                    fireworks and seasonal special events.</p>
+                </details>
                 </div>
             </div>
         </div>
@@ -164,12 +124,12 @@ include './includes/navbar.php';
                     <li>Activity Log</li>
                 </ul>
                 <div class="product-actions">
-                    <a href="products.php" class="btn-primary">View Details</a>
-                    <a href="#" class="btn-icon" aria-label="Add to Compare">
-                        <svg width="24" height="24" viewBox="0 0 24 24">
-                            <path d="M9 1v2h6V1h2v2h4v18H3V3h4V1h2zm11 9H4v9h16v-9zM7 3H5v3h14V3h-2v1h-2V3H9v1H7V3z"/>
-                        </svg>
-                    </a>
+                    <details>
+                  <summary></summary>
+                  <p>Epcot is a theme park at Walt Disney World Resort featuring 
+                    exciting attractions, international pavilions, award-winning fireworks 
+                    and seasonal special events.</p>
+                </details>
                 </div>
             </div>
         </div>
@@ -188,83 +148,99 @@ include './includes/navbar.php';
                     <li>Energy Management</li>
                 </ul>
                 <div class="product-actions">
-                    <a href="products.php" class="btn-primary">View Details</a>
-                    <a href="#" class="btn-icon" aria-label="Add to Compare">
-                        <svg width="24" height="24" viewBox="0 0 24 24">
-                            <path d="M9 1v2h6V1h2v2h4v18H3V3h4V1h2zm11 9H4v9h16v-9zM7 3H5v3h14V3h-2v1h-2V3H9v1H7V3z"/>
-                        </svg>
-                    </a>
+                    <details>
+                  <summary></summary>
+                  <p>Epcot is a theme park at Walt Disney World Resort featuring 
+                    exciting attractions, international pavilions, award-winning fireworks
+                     and seasonal special events.</p>
+                </details>
                 </div>
             </div>
         </div>
     </div>
-</section>-->
-
-<section class="services-overview">
-    <div class="section-header">
-        <h2>Smart Home Services</h2>
-        <p>Comprehensive solutions for your modern lifestyle</p>
-    </div>
-
-    <div class="services-grid">
-        <div class="service-item">
-            <div class="service-icon">
-                <svg width="48" height="48" viewBox="0 0 24 24">
-                    <path d="M12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
-                </svg>
-            </div>
-            <div class="service-content">
-                <h3>Home Automation</h3>
-                <p>Transform your home with intelligent automation systems that learn and adapt to your lifestyle.</p>
-                <ul class="service-features">
-                    <li>Smart Lighting Control</li>
-                    <li>Climate Automation</li>
-                    <li>Voice-Activated Systems</li>
-                    <li>Energy Management</li>
-                </ul>
-                <a href="services.php" class="service-link">Explore Solutions</a>
-            </div>
-        </div>
-
-        <div class="service-item">
-            <div class="service-icon">
-                <svg width="48" height="48" viewBox="0 0 24 24">
-                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
-                </svg>
-            </div>
-            <div class="service-content">
-                <h3>Security Systems</h3>
-                <p>Advanced security solutions that protect your home and family around the clock.</p>
-                <ul class="service-features">
-                    <li>24/7 Monitoring</li>
-                    <li>Smart Access Control</li>
-                    <li>Mobile Notifications</li>
-                    <li>Video Surveillance</li>
-                </ul>
-                <a href="services.php" class="service-link">Learn More</a>
-            </div>
-        </div>
-
-        <div class="service-item">
-            <div class="service-icon">
-                <svg width="48" height="48" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.5 14H8c-1.66 0-3-1.34-3-3s1.34-3 3-3l.14.01C8.58 8.28 10.13 7 12 7c2.21 0 4 1.79 4 4h.5c1.38 0 2.5 1.12 2.5 2.5S17.88 16 16.5 16z"/>
-                </svg>
-            </div>
-            <div class="service-content">
-                <h3>Smart Integration</h3>
-                <p>Seamlessly connect all your smart devices into one unified ecosystem.</p>
-                <ul class="service-features">
-                    <li>Device Synchronization</li>
-                    <li>Custom Automation</li>
-                    <li>Remote Management</li>
-                    <li>System Updates</li>
-                </ul>
-                <a href="services.php" class="service-link">Discover More</a>
-            </div>
-        </div>
-    </div>
 </section>
+
+ <!-- Testimonials Section -->
+ <section class="py-20 px-4 testimonial-section">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-[var(--text-dark)] mb-4">
+                    Customer Success Stories
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Discover how our innovative smart home solutions have transformed living experiences across diverse lifestyles.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Testimonial Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg relative testimonial-card overflow-hidden">
+                    <div class="flex items-center mb-6">
+                        <img src="/publics_html/images/products/product18.jpg" alt="Client" class="w-16 h-16 rounded-full mr-5 client-avatar border-4 border-[var(--secondary-color)]">
+                        <div>
+                            <h4 class="font-bold text-[var(--text-dark)] text-xl">John Thompson</h4>
+                            <p class="text-sm text-gray-500">Digital Marketing Lead</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4 relative z-10">
+                        Our smart home system has redefined convenience. The seamless automation allows me to control every aspect of my home with just a few taps, making daily life incredibly efficient.
+                    </p>
+                    <div class="flex items-center text-[var(--secondary-color)] space-x-1">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="text-sm text-gray-500 ml-2">(4.5/5)</span>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg relative testimonial-card overflow-hidden">
+                    <div class="flex items-center mb-6">
+                        <img src="/publics_html/images/products/product17.jpg" alt="Client" class="w-16 h-16 rounded-full mr-5 client-avatar border-4 border-[var(--secondary-color)]">
+                        <div>
+                            <h4 class="font-bold text-[var(--text-dark)] text-xl">David Kim</h4>
+                            <p class="text-sm text-gray-500">Innovation Consultant</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4 relative z-10">
+                        As a tech enthusiast, I'm impressed by the robust integration and intelligent design. The system adapts to my lifestyle, providing intuitive controls and energy-saving insights.
+                    </p>
+                    <div class="flex items-center text-[var(--secondary-color)] space-x-1">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span class="text-sm text-gray-500 ml-2">(5/5)</span>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg relative testimonial-card overflow-hidden">
+                    <div class="flex items-center mb-6">
+                        <img src="/publics_html/images/products/product19.jpg" alt="Client" class="w-16 h-16 rounded-full mr-5 client-avatar border-4 border-[var(--secondary-color)]">
+                        <div>
+                            <h4 class="font-bold text-[var(--text-dark)] text-xl">Eli Rodriguez</h4>
+                            <p class="text-sm text-gray-500">Sustainability Expert</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4 relative z-10">
+                        Initially skeptical about home automation, I'm now a complete convert. The system's energy management and security features have exceeded my expectations dramatically.
+                    </p>
+                    <div class="flex items-center text-[var(--secondary-color)] space-x-1">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="text-sm text-gray-500 ml-2">(4.5/5)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 <!-- Call to Action -->
 <section class="services-cta">
@@ -273,7 +249,79 @@ include './includes/navbar.php';
             <p>Get in touch for a free consultation and personalized solution</p>
             <a href="contact.php" class="cta-button">Schedule Consultation</a>
         </div>
+    </section><br><br>
+
+    <section class="newsletter-container py-20 px-4">
+        <div class="container mx-auto max-w-4xl relative z-10">
+            <div class="form-container rounded-2xl shadow-2xl overflow-hidden">
+                <div class="grid md:grid-cols-2">
+                    <!-- Newsletter Content -->
+                    <div class="p-12 bg-[var(--background-light)] flex flex-col justify-center">
+                        <h2 class="text-3xl font-bold text-[var(--text-dark)] mb-6 animate__animated animate__fadeInLeft">
+                            Stay Ahead of Smart Home Innovation
+                        </h2>
+                        <p class="text-gray-600 mb-8 animate__animated animate__fadeInLeft animate__delay-1s">
+                            Unlock exclusive insights, cutting-edge technology updates, and personalized recommendations for your smart home journey.
+                        </p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center animate__animated animate__fadeInLeft animate__delay-2s">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[var(--secondary-color)] mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-700">Personalized Tech Insights</span>
+                            </div>
+                            <div class="flex items-center animate__animated animate__fadeInLeft animate__delay-250ms">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[var(--secondary-color)] mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-700">Exclusive Smart Home Offers</span>
+                            </div>
+                            <div class="flex items-center animate__animated animate__fadeInLeft animate__delay-500ms">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[var(--secondary-color)] mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-gray-700">Monthly Technology Digest</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter Form -->
+                    <div class="p-12 flex items-center justify-center">
+                        <form id="newsletterForm" class="w-full">
+                            <div class="input-group mb-6">
+                                <input 
+                                    type="text" 
+                                    id="name"
+                                    placeholder=" " 
+                                    required 
+                                    class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none peer"
+                                >
+                                <label for="name" class="text-xs">Full Name</label>
+                            </div>
+                            <div class="input-group mb-6">
+                                <input 
+                                    type="email" 
+                                    id="email"
+                                    placeholder=" " 
+                                    required 
+                                    class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none peer"
+                                >
+                                <label for="email" class="text-xs">Email Address</label>
+                            </div>
+                            <button 
+                                type="submit" 
+                                class="submit-btn w-full text-white py-3 rounded-lg hover:bg-green-700 transition-all duration-300"
+                            >
+                                Subscribe Now
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
 
 </main>
 

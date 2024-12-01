@@ -1,7 +1,7 @@
 <nav class="navbar">
         <div class="navbar-container">
             <div class="navbar-logo">
-                <img src="./images/Logo.jpg" alt="Automatic Homes" class="logo">
+                <img src="./images/Automatic Homes Green Logo update.png" alt="Automatic Homes" class="logo">
             </div>
 
             <div class="menu-toggle" id="mobile-menu">

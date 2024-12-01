@@ -2,7 +2,7 @@
         <div class="footer-content">
             <div class="contact-info">
                 <h4>Contact Us</h4>
-                <p>Phone: (555) 123-4567</p>
+                <p>Phone: +(233)54 2703000</p>
                 <p>Email: info@automatichomes.com</p>
             </div>
             <div class="quick-links">
@@ -26,5 +26,6 @@
     </footer>
     <script src="js/contact.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>

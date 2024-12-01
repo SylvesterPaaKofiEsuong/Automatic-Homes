@@ -4,37 +4,63 @@ include './includes/header.php';
 include './includes/navbar.php'; 
 ?>
 
+
+
+<!-- Hero Banner -->
+<section class="hero-slider">
+    <div class="slider">
+        <!-- Slide 1 -->
+        <div class="slide" style="--bg-image: url('../images/products/product11.jpg')">
+            <div class="overlay gradient-overlay"></div>
+            <div class="hero-content animate-fade-in">
+                <span class="hero-label">Professional</span>
+                <h1 class="hero-title">Security Services</h1>
+                <p class="hero-subtitle">Expert installation and maintenance for your security systems</p>
+                <div class="cta-group">
+                    <a href="contact.php" class="cta-button primary">Schedule Service</a>
+                    <a href="#services" class="cta-button secondary">View Services</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide" style="--bg-image: url('../images/products/product2.jpg')">
+            <div class="overlay gradient-overlay"></div>
+            <div class="hero-content animate-fade-in">
+                <span class="hero-label">24/7</span>
+                <h1 class="hero-title">Monitoring Solutions</h1>
+                <p class="hero-subtitle">Round-the-clock protection for your peace of mind</p>
+                <div class="cta-group">
+                <a href="contact.php" class="cta-button primary">Get Started</a>
+                <a href="#monitoring" class="cta-button secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <div class="slider-navigation">
+        <button class="prev" aria-label="Previous Slide">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+            </svg>
+        </button>
+        <div class="slide-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+        </div>
+        <button class="next" aria-label="Next Slide">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+            </svg>
+        </button>
+    </div>
+</section>
+
+
+
+
 <main class="services-page">
-    <!-- Hero Banner -->
-    <section class="services-hero">
-        <div class="slide" style="--bg-image: url('../images/services/service-main.jpg')">
-    <div class="overlay gradient-overlay"></div>
-    <div class="hero-content animate-fade-in">
-        <span class="hero-label">Professional</span>
-        <h1 class="hero-title">Security Services</h1>
-        <p class="hero-subtitle">Expert installation and maintenance for your security systems</p>
-        <div class="cta-group">
-            <a href="contact.php" class="cta-button primary">Schedule Service</a>
-            <a href="#services" class="cta-button secondary">View Services</a>
-        </div>
-    </div>
-</div>
-
-<div class="slide" style="--bg-image: url('../images/services/monitoring.jpg')">
-    <div class="overlay gradient-overlay"></div>
-    <div class="hero-content animate-fade-in">
-        <span class="hero-label">24/7</span>
-        <h1 class="hero-title">Monitoring Solutions</h1>
-        <p class="hero-subtitle">Round-the-clock protection for your peace of mind</p>
-        <div class="cta-group">
-            <a href="contact.php" class="cta-button primary">Get Started</a>
-            <a href="#monitoring" class="cta-button secondary">Learn More</a>
-        </div>
-    </div>
-</div>
-
-    </section>
-
     <!-- Main Services Section -->
     <section class="services-overview">
         <div class="section-header">
@@ -61,7 +87,7 @@ include './includes/navbar.php';
                         <li>Custom Scene Creation</li>
                         <li>Mobile App Control</li>
                     </ul>
-                    <a href="contact.php" class="service-link">Get Started</a>
+                    
                 </div>
             </div>
 
@@ -83,7 +109,7 @@ include './includes/navbar.php';
                         <li>Motion Detection</li>
                         <li>Emergency Response</li>
                     </ul>
-                    <a href="contact.php" class="service-link">Learn More</a>
+                    
                 </div>
             </div>
 
@@ -105,7 +131,7 @@ include './includes/navbar.php';
                         <li>Cross-platform Support</li>
                         <li>API Integration</li>
                     </ul>
-                    <a href="contact.php" class="service-link">Discover More</a>
+                    
                 </div>
             </div>
         </div>

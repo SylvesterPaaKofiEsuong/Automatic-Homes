@@ -5,44 +5,139 @@ include 'includes/header.php';
 
 <?php include 'includes/navbar.php'; ?>
 
-<main class="products-page">
-    <section class="page-header">
-        <h1>Our Security Systems</h1>
-        <p>Cutting-edge solutions for home and business protection</p>
-    </section>
 
-    <section class="product-listing">
-        <div class="product-grid">
-            <?php 
-            // Later, this will be dynamically populated from database
-            $products = [
-                [
-                    'name' => 'Smart Home Security System',
-                    'description' => 'Complete home security solution with mobile app integration',
-                    'image' => 'security-system-1.jpg',
-                    'price' => 'Custom Pricing'
-                ],
-                [
-                    'name' => 'Advanced Motion Sensors',
-                    'description' => 'High-precision motion detection for comprehensive protection',
-                    'image' => 'motion-sensor.jpg',
-                    'price' => 'Custom Pricing'
-                ]
-                // Add more products
-            ];
-
-            foreach ($products as $product) {
-                echo "<div class='product-card'>";
-                echo "<img src='images/{$product['image']}' alt='{$product['name']}'>";
-                echo "<h3>{$product['name']}</h3>";
-                echo "<p>{$product['description']}</p>";
-                echo "<span class='price'>{$product['price']}</span>";
-                echo "<a href='#' class='btn'>Request Quote</a>";
-                echo "</div>";
-            }
-            ?>
+<section class="hero-slider">
+    <div class="slider">
+        <!-- Slide 1 -->
+        <div class="slide" style="--bg-image: url('../images/products/product4.jpg')">
+            <div class="overlay gradient-overlay"></div>
+            <div class="hero-content animate-fade-in">
+                <span class="hero-label">Featured</span>
+                <h1 class="hero-title">Automatic Home Security </h1>
+                <p class="hero-subtitle">Experience next-generation home protection </p>
+                <div class="cta-group">
+                    <a href="contact.php" class="cta-button primary">Get Started</a>
+                    <a href="products.php" class="cta-button secondary">View Products</a>
+                </div>
+            </div>
         </div>
-    </section>
+
+        <!-- Slide 2 -->
+        <div class="slide" style="--bg-image: url('../images/products/product3.jpg')">
+            <div class="overlay gradient-overlay"></div>
+            <div class="hero-content animate-fade-in">
+                <span class="hero-label">New Release</span>
+                <h1 class="hero-title">Intelligent Monitoring</h1>
+                <p class="hero-subtitle">24/7 smart surveillance with real-time notifications</p>
+                <div class="cta-group">
+                    <a href="#" class="cta-button primary">Watch Demo</a>
+                    <a href="services.php" class="cta-button secondary">Learn More</a>
+                </div>
+            </div>
+        </div>>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <div class="slider-navigation">
+        <button class="prev" aria-label="Previous Slide">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+            </svg>
+        </button>
+        <div class="slide-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+        </div>
+        <button class="next" aria-label="Next Slide">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+            </svg>
+        </button>
+    </div>
+</section>
+
+
+<main class="products-page">
+    <section class="featured-products">
+    <div class="section-header">
+        <h2>Featured Solutions</h2>
+        <p>Discover our most popular smart home security products</p>
+    </div>
+    
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="/publics_html/images/products/product6.jpg" alt="Smart Security Camera">
+                <div class="product-badge">Bestseller</div>
+            </div>
+            <div class="product-content">
+                <h3>AI Security Camera</h3>
+                <p>4K Ultra HD • Night Vision • Motion Detection</p>
+                <ul class="product-features">
+                    <li>Face Recognition</li>
+                    <li>Mobile Alerts</li>
+                    <li>Cloud Storage</li>
+                </ul>
+                <div class="product-actions">
+                    <details>
+                  <summary> </summary>
+                  <p>Epcot is a theme park at Walt Disney World Resort featuring 
+                    exciting attractions, international pavilions, award-winning 
+                    fireworks and seasonal special events.</p>
+                </details>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="/publics_html/images/products/product5.jpg" alt="Smart Door Lock">
+                <div class="product-badge">New</div>
+            </div>
+            <div class="product-content">
+                <h3>Smart Door Lock Pro</h3>
+                <p>Fingerprint • PIN Code • Remote Access</p>
+                <ul class="product-features">
+                    <li>Biometric Security</li>
+                    <li>Auto-Lock</li>
+                    <li>Activity Log</li>
+                </ul>
+                <div class="product-actions">
+                    <details>
+                  <summary></summary>
+                  <p>Epcot is a theme park at Walt Disney World Resort featuring 
+                    exciting attractions, international pavilions, award-winning fireworks 
+                    and seasonal special events.</p>
+                </details>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="/publics_html/images/products/product4.jpg" alt="Smart Home Hub">
+                <div class="product-badge">Popular</div>
+            </div>
+            <div class="product-content">
+                <h3>Smart Home Hub</h3>
+                <p>Central Control • Voice Commands • Automation</p>
+                <ul class="product-features">
+                    <li>Device Integration</li>
+                    <li>Scene Control</li>
+                    <li>Energy Management</li>
+                </ul>
+                <div class="product-actions">
+                    <details>
+                  <summary></summary>
+                  <p>Epcot is a theme park at Walt Disney World Resort featuring 
+                    exciting attractions, international pavilions, award-winning fireworks
+                     and seasonal special events.</p>
+                </details>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 </main>
 
 <?php include 'includes/footer.php'; ?>

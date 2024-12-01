@@ -4,36 +4,63 @@ include 'includes/header.php';
 include 'includes/navbar.php';
 ?>
 
-<main class="about-page">
-    <!-- Hero Section -->
-    <section class="about-hero">
-      <div class="slide" style="--bg-image: url('../images/about/team.jpg')">
-    <div class="overlay gradient-overlay"></div>
-    <div class="hero-content animate-fade-in">
-        <span class="hero-label">Our Story</span>
-        <h1 class="hero-title">Who We Are</h1>
-        <p class="hero-subtitle">Leaders in home automation and security solutions</p>
-        <div class="cta-group">
-            <a href="#team" class="cta-button primary">Meet Our Team</a>
-            <a href="contact.php" class="cta-button secondary">Contact Us</a>
-        </div>
-    </div>
-</div>
 
-<div class="slide" style="--bg-image: url('../images/about/expertise.jpg')">
-    <div class="overlay gradient-overlay"></div>
-    <div class="hero-content animate-fade-in">
-        <span class="hero-label">Experience</span>
-        <h1 class="hero-title">Our Expertise</h1>
-        <p class="hero-subtitle">Decades of experience in smart home security</p>
-        <div class="cta-group">
-            <a href="#history" class="cta-button primary">Our History</a>
-            <a href="services.php" class="cta-button secondary">Our Services</a>
+
+<section class="hero-slider">
+    <div class="slider">
+        <!-- Slide 1 -->
+        <div class="slide" style="--bg-image: url('../images/products/product16.jpg')">
+            <div class="overlay gradient-overlay"></div>
+            <div class="hero-content animate-fade-in">
+               <span class="hero-label">Experience</span>
+                <h1 class="hero-title">Our Expertise</h1>
+                <p class="hero-subtitle">Decades of experience in smart home security</p>
+                <div class="cta-group">
+                 <a href="#history" class="cta-button primary">Our History</a>
+                 <a href="services.php" class="cta-button secondary">Our Services</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide" style="--bg-image: url('../images/products/product15.jpg')">
+            <div class="overlay gradient-overlay"></div>
+            <div class="hero-content animate-fade-in">
+                 <span class="hero-label">Our Story</span>
+                 <h1 class="hero-title">Who We Are</h1>
+                 <p class="hero-subtitle">Leaders in home automation and security solutions</p>
+                <div class="cta-group">
+                    <a href="#team" class="cta-button primary">Meet Our Team</a>
+                    <a href="contact.php" class="cta-button secondary">Contact Us</a>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-  
-    </section>
+
+    <!-- Navigation Arrows -->
+    <div class="slider-navigation">
+        <button class="prev" aria-label="Previous Slide">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+            </svg>
+        </button>
+        <div class="slide-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+        </div>
+        <button class="next" aria-label="Next Slide">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+            </svg>
+        </button>
+    </div>
+</section>
+
+
+
+
+
+<main class="about-page">
 
     <!-- Company Story -->
     <section class="company-story">
@@ -57,7 +84,7 @@ include 'includes/navbar.php';
                 </div>
             </div>
             <div class="story-image">
-                <img src="assets/images/about/team.jpg" alt="Our Team">
+                <img src="/publics_html/images/products/product12.jpg" alt="Our Team">
             </div>
         </div>
     </section>
