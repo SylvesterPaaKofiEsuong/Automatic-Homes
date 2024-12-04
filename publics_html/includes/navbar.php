@@ -1,7 +1,7 @@
 <nav class="navbar">
         <div class="navbar-container">
             <div class="navbar-logo">
-                <img src="./images/Automatic Homes Green Logo update.png" alt="Automatic Homes" class="logo">
+            <a href="index.php"><img src="./images/Automatic Homes Green Logo update.png" alt="Automatic Homes" class="logo"></a>
             </div>
 
             <div class="menu-toggle" id="mobile-menu">
@@ -16,7 +16,7 @@
                 <li><a href="services.php" class="nav-link">Services</a></li>
                 <li><a href="about.php" class="nav-link">About Us</a></li>
                 <li><a href="contact.php" class="nav-link">Contact</a></li>
-                <li><a href="./admin/login.php" class="nav-link">Login</a></li>
+                <li><a href="../admin/login.php" class="nav-link">Login</a></li>
             </ul>
         </div>
     </nav>

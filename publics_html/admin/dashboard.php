@@ -18,12 +18,12 @@ $products = $stmt->fetchAll();
 <head>
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="icon" type="image/png" href="/publics_html/images/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="shortcut icon" href="/publics_html/images/favicon/favicon.ico" />
-    <link rel="icon" type="image/svg+xml" href="/publics_html/images/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" href="../images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="shortcut icon" href="../images/favicon/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="../images/favicon/favicon.svg" />
     <meta name="apple-mobile-web-app-title" content="MyWebSite" />
-    <link rel="manifest" href="/publics_html/images/favicon/site.webmanifest" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/publics_html/images/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../images/favicon/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png" />
 </head>
 <style>
     body {

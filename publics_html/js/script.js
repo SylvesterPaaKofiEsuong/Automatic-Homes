@@ -1,25 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navbarLinks = document.querySelector('.navbar-links');
-
-    mobileMenu.addEventListener('click', () => {
-        navbarLinks.classList.toggle('active');
-        
-        // Optional: Add animation to menu toggle icon
-        mobileMenu.classList.toggle('active');
-    });
-
-    // Close menu when clicking outside or on a link
-    document.addEventListener('click', (event) => {
-        const isClickInsideNavbar = mobileMenu.contains(event.target) || navbarLinks.contains(event.target);
-        
-        if (!isClickInsideNavbar) {
-            navbarLinks.classList.remove('active');
-            mobileMenu.classList.remove('active');
-        }
-    });
-
-    // Smooth Scrolling for Navigation
+// Smooth Scrolling for Navigation
     const navLinks = document.querySelectorAll('nav a');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -52,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.style.transform = 'scale(1)';
         });
     });
-});
+
 
 
 
@@ -143,44 +122,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (link.href === currentLocation) {
             link.classList.add('active-link');
         }
-    });
-
-
-    document.addEventListener('DOMContentLoaded', function() {
-        const navbar = document.querySelector('.navbar');
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.navbar-links');
-    
-        // Scroll Effect
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-    
-        // Mobile Menu Toggle
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-    
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navbar.contains(e.target) && navLinks.classList.contains('active')) {
-                menuToggle.classList.remove('active');
-                navLinks.classList.remove('active');
-            }
-        });
-    
-        // Close mobile menu when link is clicked
-        document.querySelectorAll('.navbar-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                menuToggle.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
     });
     
 

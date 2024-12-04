@@ -17,7 +17,7 @@ include './includes/navbar.php';
             <div class="overlay gradient-overlay"></div>
             <div class="hero-content animate-fade-in">
                 <span class="hero-label">Featured</span>
-                <h1 class="hero-title">Automatic Home Security </h1>
+                <h1 class="hero-title">Automatic Security </h1>
                 <p class="hero-subtitle">Experience next-generation home protection </p>
                 <div class="cta-group">
                     <a href="contact.php" class="cta-button primary">Get Started</a>
@@ -45,7 +45,7 @@ include './includes/navbar.php';
             <div class="overlay gradient-overlay"></div>
             <div class="hero-content animate-fade-in">
                 <span class="hero-label">Premium</span>
-                <h1 class="hero-title">Advanced Home Control</h1>
+                <h1 class="hero-title">Home Control</h1>
                 <p class="hero-subtitle">Transform your space with integrated smart home solutions</p>
                 <div class="cta-group">
                     <a href="contact.php" class="cta-button primary">Free Consultation</a>
