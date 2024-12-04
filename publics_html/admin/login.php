@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <style>
     body {
         background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.2)), 
-                        url('/publics_html/images/WhatsApp\ Image\ 2024-12-03\ at\ 19.29.19.jpeg') no-repeat center center fixed;
+                        url('/publics_html/images/loginbg.jpeg') no-repeat center center fixed;
             background-size: cover;
             display: flex;
             justify-content: center;
