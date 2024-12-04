@@ -121,7 +121,7 @@ html {
 .navbar-links {
     display: flex;
     list-style: none;
-    gap: 1px;
+    gap: 0.5px;
 }
 
 .navbar-links li a {
