@@ -9,7 +9,7 @@ include 'includes/navbar.php';
 <section class="hero-slider">
     <div class="slider">
         <!-- Slide 1 -->
-        <div class="slide" style="--bg-image: url('../images/products/product16.jpg')">
+        <div class="slide" style="--bg-image: url('../images/products/product18.jpeg')">
             <div class="overlay gradient-overlay"></div>
             <div class="hero-content animate-fade-in">
                <span class="hero-label">Experience</span>
@@ -23,7 +23,7 @@ include 'includes/navbar.php';
         </div>
 
         <!-- Slide 2 -->
-        <div class="slide" style="--bg-image: url('../images/products/product15.jpg')">
+        <div class="slide" style="--bg-image: url('../images/products/product20.jpg')">
             <div class="overlay gradient-overlay"></div>
             <div class="hero-content animate-fade-in">
                  <span class="hero-label">Our Story</span>
@@ -84,7 +84,7 @@ include 'includes/navbar.php';
                 </div>
             </div>
             <div class="story-image">
-                <img src="/publics_html/images/products/product12.jpg" alt="Our Team">
+                <img src="/publics_html/images/products/product-12.jpg" alt="Our Team">
             </div>
         </div>
     </section>

@@ -16,7 +16,7 @@
                 <li><a href="services.php" class="nav-link">Services</a></li>
                 <li><a href="about.php" class="nav-link">About Us</a></li>
                 <li><a href="contact.php" class="nav-link">Contact</a></li>
-                <li><a href="/publics_html/admin/login.php" class="nav-link">Login</a></li>
+                <li><a href="./admin/login.php" class="nav-link">Login</a></li>
             </ul>
         </div>
     </nav>

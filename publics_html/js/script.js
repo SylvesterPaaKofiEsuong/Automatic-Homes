@@ -1,13 +1,23 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Menu Toggle (if needed)
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('nav ul');
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navbarLinks = document.querySelector('.navbar-links');
 
-    if (menuToggle) {
-        menuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-        });
-    }
+    mobileMenu.addEventListener('click', () => {
+        navbarLinks.classList.toggle('active');
+        
+        // Optional: Add animation to menu toggle icon
+        mobileMenu.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside or on a link
+    document.addEventListener('click', (event) => {
+        const isClickInsideNavbar = mobileMenu.contains(event.target) || navbarLinks.contains(event.target);
+        
+        if (!isClickInsideNavbar) {
+            navbarLinks.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        }
+    });
 
     // Smooth Scrolling for Navigation
     const navLinks = document.querySelectorAll('nav a');
@@ -239,5 +249,133 @@ document.getElementById('newsletterForm').addEventListener('submit', function(e)
         this.reset();
     } else {
         alert('Please enter a valid email address.');
+    }
+});
+
+
+ // Optional: Add some interactive features
+ const inputs = document.querySelectorAll('.input-field');
+ inputs.forEach(input => {
+     input.addEventListener('focus', function() {
+         this.parentElement.classList.add('focused');
+     });
+     input.addEventListener('blur', function() {
+         this.parentElement.classList.remove('focused');
+     });
+ });
+
+
+
+ document.addEventListener('DOMContentLoaded', function() {
+    const table = document.querySelector('.products-table');
+    const headers = table.querySelectorAll('th');
+    const searchContainer = document.createElement('div');
+    
+    // Search input with icon
+    searchContainer.classList.add('search-container');
+    searchContainer.innerHTML = `
+        <input type="text" class="search-input" placeholder="Search products...">
+        <span class="search-icon">🔍</span>
+    `;
+    table.parentNode.insertBefore(searchContainer, table);
+
+    const searchInput = searchContainer.querySelector('.search-input');
+
+    // Advanced table sorting
+    headers.forEach((header, index) => {
+        header.style.cursor = 'pointer';
+        header.setAttribute('title', 'Click to sort');
+        
+        const sortIndicator = document.createElement('span');
+        sortIndicator.classList.add('sort-indicator');
+        header.appendChild(sortIndicator);
+
+        header.addEventListener('click', () => {
+            sortTable(table, index);
+            updateSortIndicators(headers, index);
+        });
+    });
+
+    function sortTable(table, columnIndex) {
+        const tbody = table.querySelector('tbody');
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+        
+        const sortedRows = rows.sort((a, b) => {
+            const aColText = a.querySelector(`td:nth-child(${columnIndex + 1})`).textContent.trim();
+            const bColText = b.querySelector(`td:nth-child(${columnIndex + 1})`).textContent.trim();
+            
+            // Numeric sorting for price and ID
+            if (!isNaN(aColText.replace('$', '')) && !isNaN(bColText.replace('$', ''))) {
+                return parseFloat(aColText.replace('$', '')) - parseFloat(bColText.replace('$', ''));
+            }
+            
+            // String comparison for text columns
+            return aColText.localeCompare(bColText);
+        });
+
+        tbody.innerHTML = '';
+        sortedRows.forEach(row => tbody.appendChild(row));
+    }
+
+    function updateSortIndicators(headers, activeIndex) {
+        headers.forEach((header, index) => {
+            const indicator = header.querySelector('.sort-indicator');
+            if (index === activeIndex) {
+                indicator.textContent = '▼';
+            } else {
+                indicator.textContent = '';
+            }
+        });
+    }
+
+    // Advanced search functionality
+    searchInput.addEventListener('keyup', function() {
+        const filter = this.value.toLowerCase();
+        const rows = table.querySelectorAll('tbody tr');
+        
+        let visibleCount = 0;
+        rows.forEach(row => {
+            const cells = row.querySelectorAll('td');
+            const isVisible = Array.from(cells).some(cell => 
+                cell.textContent.toLowerCase().includes(filter)
+            );
+            
+            row.style.display = isVisible ? '' : 'none';
+            if (isVisible) visibleCount++;
+        });
+
+        // Optional: Show/hide message if no results
+        updateNoResultsMessage(table, visibleCount);
+    });
+
+    function updateNoResultsMessage(table, visibleCount) {
+        let noResultsRow = table.querySelector('.no-results');
+        
+        if (visibleCount === 0) {
+            if (!noResultsRow) {
+                noResultsRow = document.createElement('tr');
+                noResultsRow.classList.add('no-results');
+                const colspan = table.querySelectorAll('th').length;
+                noResultsRow.innerHTML = `<td colspan="${colspan}" style="text-align: center; color: #888;">No products found</td>`;
+                table.querySelector('tbody').appendChild(noResultsRow);
+            }
+        } else if (noResultsRow) {
+            noResultsRow.remove();
+        }
+    }
+
+    // Confirmation for delete actions
+    table.addEventListener('click', function(event) {
+        const deleteLink = event.target.closest('.delete-btn');
+        if (deleteLink) {
+            if (!confirm('Are you sure you want to delete this product?')) {
+                event.preventDefault();
+            }
+        }
+    });
+
+    // Optional: Responsive table scroll on smaller screens
+    if (window.innerWidth < 768) {
+        table.parentElement.style.overflowX = 'auto';
     }
 });

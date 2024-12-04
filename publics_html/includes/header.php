@@ -11,5 +11,11 @@
     <link rel="stylesheet" href="css/about-page.css">
     <link rel="stylesheet" href="css/contact-page.css">
     <link rel="stylesheet" href="css/products-page.css">
+    <link rel="icon" type="image/png" href="./images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="shortcut icon" href="./images/favicon/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="./images/favicon/favicon.svg" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="./images/favicon/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png" />
 </head>
 <body>

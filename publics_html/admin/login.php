@@ -27,43 +27,53 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html>
 <head>
     <title>Admin Login</title>
-    <link rel="stylesheet" href="/publics_html/css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/publics_html/images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="shortcut icon" href="/publics_html/images/favicon/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/publics_html/images/favicon/favicon.svg" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="/publics_html/images/favicon/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/publics_html/images/favicon/apple-touch-icon.png" />
 </head>
-<body class="min-h-screen flex items-center justify-center p-4">
-    <div class="login-container w-full max-w-md rounded-2xl p-8 animate-fade-in">
-        <form method="POST" class="space-y-6">
-            <div class="text-center">
-                <h2 class="text-3xl font-bold text-dark mb-2">Admin Login</h2>
-                <p class="text-dark text-opacity-80">Enter your credentials to access the dashboard</p>
-            </div>
+<style>
+    body {
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.2)), 
+                        url('/publics_html/images/WhatsApp\ Image\ 2024-12-03\ at\ 19.29.19.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            perspective: 4000px;
+        }
 
-            <?php /*if(isset($error)): ?>
-                <div class="bg-green-500 bg-opacity-20 text-dark p-4 rounded-lg text-center">
-                    <i class="fas fa-exclamation-triangle mr-2"></i>
-                    <?php // echo htmlspecialchars($error); ?>
-                </div>
-            <?php //endif; */?>
+</style>           
+<div class="login-container w-full rounded-2xl animate-fade-in">
+        <form method="POST" class="login-form space-y-6">
+            <div class="login-header text-center">
+                <h2 class="text-3xl font-bold text-dark mb-2">Admin Login</h2>
+                <p class="text-dark text-opacity-80">
+                    Enter your credentials to access the dashboard</p>
+            </div>
 
             <div class="space-y-4">
                 <div>
-                    <div class="relative">
-                        <i class="fas fa-user absolute left-4 top-1/2 transform -translate-y-1/2 text-white opacity-70"></i>
+                <div class="input-group">
+                        <i class="fas fa-user input-icon absolute left-4 top-1/2 transform -translate-y-1/2 text-white opacity-70"></i>
                         <input 
                             type="text" 
                             name="username" 
                             placeholder="Username" 
                             required 
-                            class="input-field w-full py-3 pl-12 pr-4 bg-white bg-opacity-10
-                             text-white placeholder-dark placeholder-opacity-70 border border-green 
-                             border-opacity-20 rounded-lg focus:outline-none focus:border-[#10B981]">
+                            class="input-field w-full py-3 pl-12 pr-4 bg-white bg-opacity-10 text-white placeholder-dark placeholder-opacity-70 border border-green border-opacity-20 rounded-lg focus:outline-none focus:border-[#10B981]">
                     </div>
                 </div>
 
                 <div>
-                    <div class="relative">
-                        <i class="fas fa-lock absolute left-4 top-1/2 transform -translate-y-1/2 text-white opacity-70"></i>
+                    <div class=" input-group">
+                        <i class="fas fa-lock input-icon absolute left-4 top-1/2 transform -translate-y-1/2 text-white opacity-70"></i>
                         <input 
                             type="password" 
                             name="password" 
@@ -77,12 +87,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div>
                 <button 
                     type="submit" 
-                    class="w-full py-3 bg-[#10B981] text-white rounded-lg hover:bg-[#059669] transition-colors duration-300 transform hover:scale-105 active:scale-95">
+                    class="login-btn w-full py-3 bg-[#10B981] text-white rounded-lg hover:bg-[#059669] transition-colors duration-300 transform hover:scale-105 active:scale-95">
                     Login
                 </button>
             </div>
 
-            <div class="text-center">
+            <div class="forgot-password">
                 <a href="#" class="text-dark text-opacity-70 hover:text-opacity-100 transition-colors text-sm">
                     Forgot Password?
                 </a>
@@ -90,6 +100,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </form>
     </div>
 </body>
-<script src="https://cdn.tailwindcss.com"></script>
-
+<script src="../js/script.js"></script>
 </html>

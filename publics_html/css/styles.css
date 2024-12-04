@@ -6,6 +6,7 @@
     --background-light: #F3F4F6;   /* Light Gray */
     --text-dark: #1F2937;          /* Deep Gray */
     --white: #FFFFFF;
+    --hover-color: #059669; 
 }
 
 /* Modern Reset and Base Styles */
@@ -153,7 +154,7 @@ html {
 .bar {
     width: 25px;
     height: 3px;
-    background-color: var(--text-dark);
+    background-color: var(--secondary-color);
     margin: 3px 0;
     transition: 0.4s;
 }
@@ -197,12 +198,7 @@ html {
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-/* Scrolled navbar effect */
-.navbar.scrolled {
-    background-color: var(--text-dark);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
+
 
 
 
@@ -903,26 +899,303 @@ footer {
 
 
 
-/* login styling */
+
+/*Login style*/
 .login-container {
-    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 420px;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    transform: rotateX(10deg);
+    transition: all 0.5s ease;
 }
+
+.login-container:hover {
+    transform: rotateX(0) scale(1.03);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-header h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.login-header p {
+    color: rgba(255,255,255,0.7);
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
 .input-field {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
     transition: all 0.3s ease;
 }
+
+.input-field::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
 .input-field:focus {
     outline: none;
     border-color: #10B981;
     box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
 }
+
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255,255,255,0.7);
+    transition: color 0.3s ease;
+}
+
+.input-field:focus + .input-icon {
+    color: #10B981;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: #10B981;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-btn:hover {
+    background-color: #059669;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 14px rgba(0,0,0,0.1);
+}
+
+.login-btn:active {
+    transform: translateY(1px);
+}
+
+.login-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: all 0.5s ease;
+}
+
+.login-btn:hover::before {
+    left: 100%;
+}
+
+.forgot-password {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.forgot-password a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
 .animate-fade-in {
     animation: fadeIn 0.6s ease forwards;
     opacity: 0;
+}
+
+
+/*Dashboard style*/
+.dashboard {
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: var(--white);
+    box-shadow: var(--shadow-subtle);
+    border-radius: 12px;
+    transition: box-shadow var(--transition-speed) ease;
+}
+
+.dashboard:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.dashboard h1 {
+    color: var(--text-dark);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.dashboard-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: 
+        background-color var(--transition-speed) ease,
+        transform var(--transition-speed) ease;
+}
+
+.btn:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+}
+
+.search-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: var(--background-light);
+    transition: border-color var(--transition-speed) ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-dark);
+    opacity: 0.5;
+}
+
+.products-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.products-table th {
+    background-color: transparent;
+    color: var(--text-dark);
+    font-weight: 600;
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 2px solid var(--secondary-color);
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.products-table tr {
+    background-color: var(--white);
+    box-shadow: var(--shadow-subtle);
+    border-radius: 8px;
+    transition: transform var(--transition-speed) ease;
+}
+
+.products-table tr:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.products-table td {
+    padding: 15px;
+    color: var(--text-dark);
+}
+
+.action-links {
+    display: flex;
+    gap: 10px;
+}
+
+.action-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color var(--transition-speed) ease;
+}
+
+.action-links a:hover {
+    color: var(--hover-color);
+}
+
+.delete-btn {
+    color: #FF4444;
+}
+
+.delete-btn:hover {
+    color: #FF0000;
+}
+
+@media screen and (max-width: 768px) {
+    .dashboard {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .products-table {
+        font-size: 14px;
+    }
 }
