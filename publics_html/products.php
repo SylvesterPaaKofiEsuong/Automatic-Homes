@@ -31,7 +31,7 @@ include 'includes/header.php';
                 <p class="hero-subtitle">24/7 smart surveillance with real-time notifications</p>
                 <div class="cta-group">
                     <a href="#" class="cta-button primary">Watch Demo</a>
-                    <a href="services.php" class="cta-button secondary">Learn More</a>
+                    <a href="#" class="cta-button secondary">Learn More</a>
                 </div>
             </div>
         </div>>
@@ -58,16 +58,17 @@ include 'includes/header.php';
 
 
 <main class="products-page">
-    <section class="featured-products">
-    <div class="section-header">
-        <h2>Featured Solutions</h2>
-        <p>Discover our most popular smart home security products</p>
-    </div>
-    
-    <div class="product-grid">
+        <section class="featured-products">
+            <div class="section-header">
+                <h2>Smart Home Security Solutions</h2>
+                <p>Innovative technology designed to protect and simplify your life. 
+                    Experience the future of home security with intelligent, interconnected devices.</p>
+            </div>
+            
+            <div class="product-grid">
         <div class="product-card">
             <div class="product-image">
-                <img src="/publics_html/images/products/product6.jpg" alt="Smart Security Camera">
+                <img src="/publics_html/images/products/product2.jpg" alt="Smart Security Camera">
                 <div class="product-badge">Bestseller</div>
             </div>
             <div class="product-content">
@@ -80,11 +81,12 @@ include 'includes/header.php';
                 </ul>
                 <div class="product-actions">
                     <details>
-                  <summary> </summary>
-                  <p>Epcot is a theme park at Walt Disney World Resort featuring 
-                    exciting attractions, international pavilions, award-winning 
-                    fireworks and seasonal special events.</p>
-                </details>
+                    <summary class="learn-more-btn">Learn More</summary>
+                    <p>The ultimate home automation centerpiece. 
+                         Seamlessly integrate devices from different ecosystems, 
+                        create custom automation scenes, and gain unprecedented insights into your home's energy consumption. 
+                         Control everything with simple voice commands or through our intuitive mobile app.</p>
+                    </details>
                 </div>
             </div>
         </div>
@@ -104,18 +106,19 @@ include 'includes/header.php';
                 </ul>
                 <div class="product-actions">
                     <details>
-                  <summary></summary>
-                  <p>Epcot is a theme park at Walt Disney World Resort featuring 
-                    exciting attractions, international pavilions, award-winning fireworks 
-                    and seasonal special events.</p>
-                </details>
+                    <summary class="learn-more-btn">Learn More</summary>
+                    <p>The ultimate home automation centerpiece. 
+                         Seamlessly integrate devices from different ecosystems, 
+                        create custom automation scenes, and gain unprecedented insights into your home's energy consumption. 
+                         Control everything with simple voice commands or through our intuitive mobile app.</p>
+                    </details>
                 </div>
             </div>
         </div>
 
         <div class="product-card">
             <div class="product-image">
-                <img src="/publics_html/images/products/product4.jpg" alt="Smart Home Hub">
+                <img src="/publics_html/images/products/product-5.jpeg" alt="Smart Home Hub">
                 <div class="product-badge">Popular</div>
             </div>
             <div class="product-content">
@@ -128,16 +131,17 @@ include 'includes/header.php';
                 </ul>
                 <div class="product-actions">
                     <details>
-                  <summary></summary>
-                  <p>Epcot is a theme park at Walt Disney World Resort featuring 
-                    exciting attractions, international pavilions, award-winning fireworks
-                     and seasonal special events.</p>
-                </details>
+                    <summary class="learn-more-btn">Learn More</summary>
+                    <p>The ultimate home automation centerpiece. 
+                         Seamlessly integrate devices from different ecosystems, 
+                        create custom automation scenes, and gain unprecedented insights into your home's energy consumption. 
+                         Control everything with simple voice commands or through our intuitive mobile app.</p>
+                    </details>
                 </div>
             </div>
         </div>
     </div>
 </section>
-</main>
+    </main>
 
 <?php include 'includes/footer.php'; ?>

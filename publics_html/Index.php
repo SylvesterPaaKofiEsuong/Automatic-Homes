@@ -13,7 +13,7 @@ include './includes/navbar.php';
 <section class="hero-slider">
     <div class="slider">
         <!-- Slide 1 -->
-        <div class="slide" style="--bg-image: url('../images/products/product10.jpg')">
+        <div class="slide" style="--bg-image: url('../images/products/product6.jpg')">
             <div class="overlay gradient-overlay"></div>
             <div class="hero-content animate-fade-in">
                 <span class="hero-label">Featured</span>
@@ -27,7 +27,7 @@ include './includes/navbar.php';
         </div>
 
         <!-- Slide 2 -->
-        <div class="slide" style="--bg-image: url('../images/products/product5.jpg')">
+        <div class="slide" style="--bg-image: url('../images/products/product3.jpg')">
             <div class="overlay gradient-overlay"></div>
             <div class="hero-content animate-fade-in">
                 <span class="hero-label">New Release</span>
@@ -41,7 +41,7 @@ include './includes/navbar.php';
         </div>
 
         <!-- Slide 3 -->
-        <div class="slide" style="--bg-image: url('../images/products/product7.jpg')">
+        <div class="slide" style="--bg-image: url('../images/products/product4.jpg')">
             <div class="overlay gradient-overlay"></div>
             <div class="hero-content animate-fade-in">
                 <span class="hero-label">Premium</span>
@@ -88,7 +88,7 @@ include './includes/navbar.php';
     <div class="product-grid">
         <div class="product-card">
             <div class="product-image">
-                <img src="/publics_html/images/products/product6.jpg" alt="Smart Security Camera">
+                <img src="/publics_html/images/products/product2.jpg" alt="Smart Security Camera">
                 <div class="product-badge">Bestseller</div>
             </div>
             <div class="product-content">
@@ -101,11 +101,12 @@ include './includes/navbar.php';
                 </ul>
                 <div class="product-actions">
                     <details>
-                  <summary> </summary>
-                  <p>Epcot is a theme park at Walt Disney World Resort featuring 
-                    exciting attractions, international pavilions, award-winning 
-                    fireworks and seasonal special events.</p>
-                </details>
+                    <summary class="learn-more-btn">Learn More</summary>
+                    <p>The ultimate home automation centerpiece. 
+                         Seamlessly integrate devices from different ecosystems, 
+                        create custom automation scenes, and gain unprecedented insights into your home's energy consumption. 
+                         Control everything with simple voice commands or through our intuitive mobile app.</p>
+                    </details>
                 </div>
             </div>
         </div>
@@ -125,18 +126,19 @@ include './includes/navbar.php';
                 </ul>
                 <div class="product-actions">
                     <details>
-                  <summary></summary>
-                  <p>Epcot is a theme park at Walt Disney World Resort featuring 
-                    exciting attractions, international pavilions, award-winning fireworks 
-                    and seasonal special events.</p>
-                </details>
+                    <summary class="learn-more-btn">Learn More</summary>
+                    <p>The ultimate home automation centerpiece. 
+                         Seamlessly integrate devices from different ecosystems, 
+                        create custom automation scenes, and gain unprecedented insights into your home's energy consumption. 
+                         Control everything with simple voice commands or through our intuitive mobile app.</p>
+                    </details>
                 </div>
             </div>
         </div>
 
         <div class="product-card">
             <div class="product-image">
-                <img src="/publics_html/images/products/product4.jpg" alt="Smart Home Hub">
+                <img src="/publics_html/images/products/product-5.jpeg" alt="Smart Home Hub">
                 <div class="product-badge">Popular</div>
             </div>
             <div class="product-content">
@@ -149,11 +151,12 @@ include './includes/navbar.php';
                 </ul>
                 <div class="product-actions">
                     <details>
-                  <summary></summary>
-                  <p>Epcot is a theme park at Walt Disney World Resort featuring 
-                    exciting attractions, international pavilions, award-winning fireworks
-                     and seasonal special events.</p>
-                </details>
+                    <summary class="learn-more-btn">Learn More</summary>
+                    <p>The ultimate home automation centerpiece. 
+                         Seamlessly integrate devices from different ecosystems, 
+                        create custom automation scenes, and gain unprecedented insights into your home's energy consumption. 
+                         Control everything with simple voice commands or through our intuitive mobile app.</p>
+                    </details>
                 </div>
             </div>
         </div>

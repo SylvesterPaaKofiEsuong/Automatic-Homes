@@ -51,7 +51,7 @@ $products = $stmt->fetchAll();
                 <li><a href="../admin/login.php" class="nav-link">Login</a></li>
             </ul>
         </div>
-    </nav><br><br><br>
+    </nav>
 
     <div class="dashboard">
         <h1>Welcome, <?//php echo $_SESSION['username']; ?></h1>
@@ -90,4 +90,5 @@ $products = $stmt->fetchAll();
     </div>
 </body>
 <script src="../js/script.js"></script>
+<script src="../js/nav.js"></script>
 </html>
